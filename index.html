@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>빛담 프로필</title>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: Arial, sans-serif;
+      color: rgba(75, 63, 53, 0.85);
+
       background-color: #f5e8c7;
       margin: 0;
       padding: 0;
@@ -15,6 +18,12 @@
       align-items: center;
       min-height: 100vh;
       text-align: center;
+    }
+    hr{
+      background: rgba(74, 60, 47, 0.13);
+      height: 1px;
+      border: 0;
+      margin: 25px 0 15px 0;
     }
     .container {
       background-color: #fffcf3;
@@ -42,9 +51,19 @@
       display: block;
     }
     h1 {
+
       font-size: 24px;
-      color: #4a3c2f;
+      color: #4b3f35;
       margin: 0 0 10px;
+    }
+    h4 {
+      font-family: 'Do Hyeon', sans-serif;
+      margin-bottom: 0;
+    }
+    .subTitle {
+      font-family: 'Gamja Flower';
+      font-size: 15px;
+      margin-top: 2px;
     }
     .social-icons {
       display: flex;
@@ -81,17 +100,44 @@
       display: inline-block;
       margin: 0;
     }
-    .email {
-      font-size: 14px;
-      color: #4a3c2f;
-      margin-top: 20px;
+    .contect-box {
+      text-align: center;
     }
-    .email a {
-      color: #4a3c2f;
-      text-decoration: none;
+    .contect-button {
+      display: inline-flex;     /* 내부 요소 정렬을 위해 flex 사용 */
+      justify-content: center;  /* 수평 중앙 정렬 */
+      align-items: center;      /* 수직 중앙 정렬 */
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #fff;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      cursor: pointer;
+      margin: auto 5px;
+    }
+    .contect-button img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: inline-block;
+    }
+    /* Gmail 아이콘만 축소 */
+    #email-icon {
+      width: 70%;
+      height: 70%;
+    }
+
+    /* 카카오톡 아이콘은 그대로 유지 */
+    #kakao-icon {
+      width: 65%;
+      height: 65%;
+    }
+    .contect-button:hover {
+      transform: scale(1.1);
     }
     .footer {
-
       font-size: 12px;
       color: rgba(74, 60, 47, 0.48);
       margin-top: 20px;
@@ -105,15 +151,29 @@
 <body>
 <div class="container">
   <div class="profile-img"><img src="img/profileLogo.png" alt="prorileImage"></div>
-  <h4>빛담<br>먹고 보고 찍는 순간들<br>빛담의 감성 콘텐츠 노트</h4>
-<!--  <div class="social-icons">-->
-<!--    <a href="mailto:example@email.com">&#x2709;</a>-->
-<!--    <a href="https://www.example.com">&#x1F310;</a>-->
-<!--  </div>-->
+  <h4>빛담</h4>
+  <p class="subTitle">먹고 보고 찍는 순간들<br>빛담의 감성 콘텐츠 노트</p>
+
+
   <a href="https://www.instagram.com/lightbydam" class="link-button"><img class="social-icons" src="img/instaLogo.png" >빛담의 추천일지</a>
   <a href="https://www.instagram.com/lightbydam_trip" class="link-button"><img class="social-icons" src="img/instaLogo.png">빛담의 여행일지</a>
-  <a href="https://m.blog.naver.com/h2me_film" class="link-button"><img class="social-icons" src="img/blogLogo.png">빛담 리뷰</a>
-  <div class="email">협찬 문의<br><a href="mailto:seunghwanoo@kakao.com">seunghwanoo@kakao.com</a></div>
+  <a href="https://m.blog.naver.com/h2me_film" class="link-button"><img class="social-icons" src="img/blogIcon.png">빛담 리뷰</a>
+  <a href="https://seunghwano.github.io/lightbydamCard/" class="link-button"><img class="social-icons" src="img/notionIcon.png">공개 예정</a>
+  <br>
+
+  <p class="subTitle">✨ 협업 및 협찬 문의  </p>
+
+  <div class="contect-box">
+    <a href="mailto:seunghwanoo@kakao.com" class="contect-button">
+      <img id="email-icon" src="img/emailIcon.png" alt="이메일 문의">
+    </a>
+    <a href="https://open.kakao.com/me/lightbydam" class="contect-button">
+      <img id="kakao-icon" src="img/KakaoLogo.png" alt="오픈채팅 문의">
+    </a>
+  </div>
+
+
+
   <div class="footer">design by lightbydam</div>
 </div>
 </body>

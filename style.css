@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+/* ==============================
+   🔹 전체 배경 및 기본 설정
+============================== */
+body {
+    font-family: Arial, sans-serif;
+    color: rgba(75, 63, 53, 0.85);
+    background-color: #f5e8c7;
+    background-image: url("img/backImg.png");
+    background-position: top center;
+    background-size: 100% auto;
+    background-attachment: scroll;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* ==============================
+   🔹 공통 요소
+============================== */
+hr {
+    background: rgba(74, 60, 47, 0.13);
+    height: 1px;
+    border: 0;
+    margin: 25px 0 15px 0;
+}
+
+h1 {
+    font-size: 24px;
+    color: #4b3f35;
+    margin: 0 0 10px;
+}
+
+h4 {
+    font-family: 'Do Hyeon', sans-serif;
+    margin-bottom: 0;
+}
+
+.subTitle {
+    font-family: 'Gamja Flower';
+    font-size: 15px;
+    margin-top: 2px;
+}
+
+/* ==============================
+   🔹 컨테이너 영역
+============================== */
+.container {
+    background-color: #fffcf3;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 400px;
+}
+
+/* ==============================
+   🔹 프로필 이미지
+============================== */
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* ==============================
+   🔹 링크 버튼 영역
+============================== */
+.link-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    width: 90%;
+    margin: 10px auto;
+    padding: 15px;
+    background-color: #fff;
+    color: #4a3c2f;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.link-button:hover {
+    background-color: #e0d4c0;
+}
+
+.link-button img.social-icons {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin: 0;
+}
+
+/* ==============================
+   🔹 소셜 아이콘
+============================== */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: #4a3c2f;
+    font-size: 20px;
+}
+
+/* ==============================
+   🔹 연락처 버튼
+============================== */
+.contect-box {
+    text-align: center;
+}
+
+.contect-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+    margin: auto 5px;
+}
+
+.contect-button:hover {
+    transform: scale(1.1);
+}
+
+.contect-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: inline-block;
+}
+
+/* 이메일 아이콘 크기 줄이기 */
+#email-icon,
+#kakao-icon {
+    width: 70%;
+    height: 70%;
+}
+
+/* ==============================
+   🔹 푸터
+============================== */
+.footer {
+    font-size: 12px;
+    color: rgba(74, 60, 47, 0.48);
+    margin-top: 20px;
+}
+
+/* ==============================
+   🔹 반응형
+============================== */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .link-button {
+        font-size: 14px;
+        padding: 12px;
+    }
+}

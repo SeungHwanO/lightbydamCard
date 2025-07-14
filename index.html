@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>빛담 프로필</title>
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+  <script>
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+    });
+    document.querySelectorAll('a[href^="http"]').forEach(link => {
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer'); // 보안용 (필수!)
+    });
+  </script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -15,7 +24,6 @@
       background-position: top center;
       background-size: 100% auto;
       background-attachment: scroll;
-
       margin: 0;
       padding: 0;
       min-height: 100vh;
@@ -158,14 +166,14 @@
 <body>
 <div class="container">
   <div class="profile-img"><img src="img/profileLogo.png" alt="prorileImage"></div>
-  <h4>빛담</h4>
+  <h4>@빛담</h4>
   <p class="subTitle">먹고 보고 찍는 순간들<br>빛담의 감성 콘텐츠 노트</p>
 
 
-  <a href="https://www.instagram.com/lightbydam" class="link-button"><img class="social-icons" src="img/instaLogo.png" >빛담의 추천일지</a>
-  <a href="https://www.instagram.com/lightbydam_trip" class="link-button"><img class="social-icons" src="img/instaLogo.png">빛담의 여행일지</a>
-  <a href="https://m.blog.naver.com/h2me_film" class="link-button"><img class="social-icons" src="img/blogIcon.png">빛담의 리뷰일지</a>
-  <a href="https://seunghwano.github.io/lightbydamCard/" class="link-button"><img class="social-icons" src="img/notionIcon.png">공개 예정</a>
+  <a href="https://www.instagram.com/lightbydam" class="link-button" target="_blank" rel="noopener noreferrer"><img class="social-icons" src="img/instaLogo.png" >빛담의 추천일지</a>
+  <a href="https://www.instagram.com/lightbydam_trip" class="link-button" target="_blank" rel="noopener noreferrer"><img class="social-icons" src="img/instaLogo.png">빛담의 여행일지</a>
+  <a href="https://m.blog.naver.com/h2me_film" class="link-button" target="_blank" rel="noopener noreferrer"><img class="social-icons" src="img/blogIcon.png">빛담의 리뷰일지</a>
+  <a href="https://seunghwano.github.io/lightbydamCard/" class="link-button" target="_blank" rel="noopener noreferrer"><img class="social-icons" src="img/notionIcon.png">공개 예정</a>
   <br>
 
   <p class="subTitle">✨ 협업 및 협찬 문의  </p>

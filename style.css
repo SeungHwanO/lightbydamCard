@@ -87,10 +87,9 @@ h4 {
    🔹 링크 버튼 영역
 ============================== */
 .link-button {
+    position: relative; /* 기준점 */
     display: flex;
     align-items: center;
-    gap: 10px;
-    justify-content: center;
     width: 90%;
     margin: 10px auto;
     padding: 15px;
@@ -100,7 +99,6 @@ h4 {
     border-radius: 25px;
     font-size: 16px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s;
 }
 
 .link-button:hover {
@@ -108,10 +106,20 @@ h4 {
 }
 
 .link-button img.social-icons {
+    flex-shrink: 0;
     width: 20px;
     height: 20px;
-    display: inline-block;
     margin: 0;
+}
+
+.link-button p.social-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    white-space: nowrap;
+    z-index: 0; /* 아이콘과 겹칠 경우 조정 */
+    letter-spacing: 0.6px;
 }
 
 /* ==============================
@@ -119,7 +127,7 @@ h4 {
 ============================== */
 .social-icons {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 15px;
     margin-bottom: 20px;
 }
